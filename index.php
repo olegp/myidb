@@ -10,7 +10,8 @@ img {  border-style: none; }
 -->
 </style>
 </head>
-<body bgcolor=gray class="default"><a href="." style="padding: 10px; float: left">
+<body bgcolor=gray class="default">
+<a href="." style="padding: 10px; float: left">
 <img src="it.png" alt="International Times" />
 </a>
 
@@ -35,7 +36,8 @@ function MakeThumbnail($imagename, $thumbname)
     $dstimage = ImageCreateTrueColor($dstw, $dsth);
 
 
-    ImageCopyResized($dstimage, $srcimage, 0, 0, 0, 0, $dstw, $dsth, $size[0], $size[1]);
+    ImageCopyResized($dstimage, $srcimage, 0, 0, 0, 0, $dstw, $dsth, $size[0], $size[1]);
+
     ImagePNG($dstimage, $thumbname);
   }
 }
@@ -114,21 +116,6 @@ function GetArchive() {
 <div style="margin: 10px">
 <?php GetArchive(); ?>
 </div>
-
-<div style="margin: 10px">
-<!-- AddThis Button BEGIN -->
-<a href="http://www.addthis.com/bookmark.php" onclick="addthis_url   = location.href; addthis_title = document.title; return addthis_click(this);" target="_blank"><img src="http://s7.addthis.com/button1-addthis.gif" width="125" height="16" border="0" alt="Bookmark and Share" /></a> <script type="text/javascript">var addthis_pub = 'cabalistik';</script><script type="text/javascript" src="http://s7.addthis.com/js/widget.php?v=10"></script>  
-<!-- AddThis Button END -->
-</div>
-
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-var pageTracker = _gat._getTracker("UA-2811164-5");
-pageTracker._trackPageview();
-</script>
 
 </body>
 </html>
